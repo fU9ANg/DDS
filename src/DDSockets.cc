@@ -1,9 +1,11 @@
 
 #include "DDSockets.h"
 
-#include <iostream>
+#include "DDSQueue.h"
+#include "DDSMutexLockGuard.h"
+#include "DDSingle.h"
 
-using namespace DDS::network;
+using namespace DDS::NETWORK;
 
 namespace
 {

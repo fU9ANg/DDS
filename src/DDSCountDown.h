@@ -17,7 +17,7 @@ class DDSCountDown
         DDSCountDown (int count);
         void Wait (void);
         void CountDown (void);
-        int Count () const;
+        int  Count () const;
 
     private:
         mutable DDSMutexLock m_mutex;

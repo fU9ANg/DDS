@@ -1,6 +1,6 @@
 
-#ifndef DDS_SHAREDLIB_DDSINGLE_H
-#define DDS_SHAREDLIB_DDSINGLE_H
+#ifndef _DDS_SHAREDLIB_DDSINGLE_H
+#define _DDS_SHAREDLIB_DDSINGLE_H
 
 #include <pthread.h>
 #include <stdlib.h>
@@ -53,4 +53,4 @@ type* DDSingle<type>::m_value = NULL;
 // Usage:
 // Foo& foo = DDSingle<Foo>::instance();
 
-#endif
+#endif  // _DDS_SHAREDLIB_DDSINGLE_H

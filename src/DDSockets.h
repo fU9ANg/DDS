@@ -1,17 +1,13 @@
 
-#include <errno.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <strings.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <unistd.h>
-#include <string.h>
+#ifndef _DDS_NETWORK_DDSOCKETS_H
+#define _DDS_NETWORK_DDSOCKETS_H
+
+#include "DDSDefines.h"
 
 namespace DDS
 {
 
-namespace network
+namespace NETWORK
 {
 
 typedef struct sockaddr SA;
@@ -33,7 +29,7 @@ void closeSocket (int sockfd);
 void shutdownWrite (int sockfd);
 void getHostPort (char* buf, size_t size, const struct sockaddr_in& addr);
 void setHostPort (const char* ip, uint16_t port, struct sockaddr_in* addr);
-int getSocketError (int sockfd);
+int  getSocketError (int sockfd);
 struct sockaddr_in getLocalAddr (int sockfd);
 struct sockaddr_in getRemoteAddr (int sockfd);
 bool isSelf (int sockfd);
@@ -62,3 +58,5 @@ inline uint16_t DDS_ntohs (uint16_t netshort)
 }
 }
 }
+
+#endif  //_DDS_NETWORK_DDSOCKETS_H

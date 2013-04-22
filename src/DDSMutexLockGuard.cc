@@ -1,8 +1,7 @@
 
 #include "DDSMutexLockGuard.h"
-#include <pthread.h>
 
-using namespace DDS::sharedLib;
+using namespace DDS::SHAREDLIB;
 
 DDSMutexLock::DDSMutexLock (void)
 {

@@ -1,19 +1,13 @@
 
+#ifndef _DDS_SHAREDLIB_DDSMUTEXLOCKGUARD_H
+#define _DDS_SHAREDLIB_DDSMUTEXLOCKGUARD_H
 
-#include <errno.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <strings.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <unistd.h>
-#include <string.h>
-#include <pthread.h>
+#include "DDSDefines.h"
 
 namespace DDS
 {
 
-namespace sharedLib
+namespace SHAREDLIB
 {
 
 class DDSMutexLock
@@ -49,3 +43,5 @@ class DDSMutexGuard
 
 }
 }
+
+#endif  // _DDS_SHAREDLIB_DDSMUTEXLOCKGUARD_H

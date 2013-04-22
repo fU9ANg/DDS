@@ -1,17 +1,12 @@
 
-#include <errno.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <strings.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <unistd.h>
-#include <string.h>
+#ifndef _DDS_SHAREDLIB_DDSLOGGER_H
+#define _DDS_SHAREDLIB_DDSLOGGER_H
+
+#include "DDSDefines.h"
 
 namespace DDS
 {
-
-namespace sharedLib
+namespace SHAREDLIB
 {
 
 class DDSLogger
@@ -68,3 +63,5 @@ T* CheckNotNULL (const char* file, int line, const char* names, T* ptr)
 
 }
 }
+
+#endif  // _DDS_SHAREDLIB_DDSLOGGER_H
