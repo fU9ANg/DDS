@@ -9,3 +9,5 @@ echo "compiling ... DDSCountDown.o"
 g++ -o DDSCountDown.o -c DDSCountDown.cc -I.
 echo "compiling ... DDSException.o"
 g++ -o DDSException.o -c DDSException.cc -I.
+echo "compiling ... DDSLogger.o"
+g++ -o DDSLogger.o -c DDSLogger.cc -I.

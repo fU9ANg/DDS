@@ -9,6 +9,7 @@ namespace DDS
 namespace SHAREDLIB
 {
 
+class DDSLOGGER;
 class DDSLogger
 {
 
@@ -36,6 +37,8 @@ class DDSLogger
         static eLevel Level (void);
         static void setLevel (eLevel lvl);
 
+    private:
+        DDSLOGGER   m_log;
 };
 
 #define LOG_TRACE if (DDSLogger::Level() <= DDSLogger::TRACE) \
@@ -47,6 +50,8 @@ class DDSLogger
 #define LOG_FATAL     DDSLogger(__FILE__, __LINE__, DDSLogger::FATAL).stream()
 #define LOG_SYSERR    DDSLogger(__FILE__, __LINE__, false).stream();
 #define LOG_SYSFATAL  DDSLogger(__FILE__, __LINE__, true).stream();
+
+const char* StrError (int saved_errno);
 
 #define CHECK_NOTNULL(val) \
     ::DDS::sharedLib::CheckNotNULL(__FILE__, __LINE__, "'" #val "' Must be non NULL", (val))
