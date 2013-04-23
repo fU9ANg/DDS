@@ -21,6 +21,7 @@
 #include <string>
 #include <exception>
 
+#include <vector>
 #include <deque>
 #include <list>
 #include <map>
